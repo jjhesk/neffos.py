@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 """
 +-----------------------+
 |                       |                           +----------------------------+
@@ -40,3 +42,19 @@
                                                                                         +--------------------------+
 
 """
+import sys
+from .neff import IRISSocket, Conn, NSConn, Room, Message, NeffSupportSocket, Bolors
+if sys.version_info < (3, 5):
+    raise EnvironmentError("Python 3.5 or above is required")
+__version__ = "0.5.1"
+
+__all__ = [
+    '__version__',
+    'IRISSocket',
+    'NeffSupportSocket',
+    'Conn',
+    'NSConn',
+    'Room',
+    'Message',
+    'Bolors',
+]
